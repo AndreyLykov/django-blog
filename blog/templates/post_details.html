@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+
+{% block content %}
+{% for post in posts %}
+    <h1>{{ current_post.title }}</h1>
+    <p>{{ current_post.text|linebreaks }}</p>
+    <p>{{ current_post.publication_date|date: Y.m.d }}</p>
+{% endfor %}
+{% endblock content %}
