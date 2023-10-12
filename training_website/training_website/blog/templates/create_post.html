@@ -1,0 +1,11 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+<form action="{% url "training_website: add_post" %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="text" value="title" placeholder="Type the title here">
+    <input type="text" value="content" placeholder="Type your text there">
+    <buttom name='Submit'>Add the post.</bottom>
+</form>
+{% endblock content %}
